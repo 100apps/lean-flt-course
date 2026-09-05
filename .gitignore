@@ -1,0 +1,9 @@
+.cache/
+.auth/
+.lake/
+site/
+.env
+*.olean
+*.ilean
+*.log
+.DS_Store

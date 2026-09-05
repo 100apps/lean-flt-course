@@ -1,0 +1,77 @@
+site_name: Lean × 费马大定理
+site_description: 从高中数学出发，逐步读懂 Lean 4 费马大定理形式化仓库
+repo_url: https://github.com/OWNER/lean-flt-course
+repo_name: OWNER/lean-flt-course
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/progress.js
+
+nav:
+  - 首页: index.md
+  - 开始之前:
+      - 课程目标: start/goals.md
+      - Docker 环境: start/docker.md
+      - 手机学习方式: start/mobile.md
+      - 完整路线: roadmap.md
+      - 学习进度: progress.md
+  - 第一阶段 · Lean 基础:
+      - 第 1 课 · 表达式与类型: lessons/01-expressions.md
+      - 第 2 课 · 命题与证明: lessons/02-props-proofs.md
+      - 第 3 课 · 四个基础 tactic: lessons/03-tactics.md
+      - 第 4 课 · 逻辑与矛盾: lessons/04-logic.md
+      - 第 5 课 · 自然数与归纳: lessons/05-induction.md
+      - 第 6 课 · 结构体: lessons/06-structures.md
+  - 第二阶段 · 连接 FLT:
+      - 第 7 课 · 玩具 Frey 矛盾: lessons/07-toy-frey.md
+      - 第 8 课 · 阅读最终定理: lessons/08-flt-top.md
+      - 仓库阅读地图: flt/repo-map.md
+      - 数学阶梯: flt/math-ladder.md
+  - 参考:
+      - Lean 符号表: reference/symbols.md
+      - 常见错误: reference/errors.md
+      - 词汇表: reference/glossary.md
+

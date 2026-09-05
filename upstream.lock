@@ -1,0 +1,6 @@
+# Anthropic FLT source version used by this course.
+repository=https://github.com/anthropics/fermats-last-theorem.git
+revision=aa2d8b34692b16c70f699536de0d8e75b9a3e9ef
+lean=leanprover/lean4:v4.33.1
+mathlib=db584cd6d46c92f209a44c0f1c829460d327499d
+observed=2026-09-05

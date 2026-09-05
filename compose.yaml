@@ -1,0 +1,35 @@
+name: lean-flt-course
+
+services:
+  lean:
+    image: lean-flt-course-tools:4.33.0
+    build:
+      context: .
+      dockerfile: Dockerfile.lean
+      args:
+        UBUNTU_MIRROR: "${UBUNTU_MIRROR:-http://mirrors.ustc.edu.cn/ubuntu}"
+        LEAN_TOOLCHAIN: "leanprover/lean4:v4.33.0"
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - ./.cache/lake:/workspace/.lake
+      - ./.cache/mathlib:/root/.cache/mathlib
+    stdin_open: true
+    tty: true
+
+  docs:
+    build:
+      context: .
+      dockerfile: Dockerfile.docs
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "${DOCS_BIND_ADDRESS:-127.0.0.1}:${DOCS_PORT:-8000}:8000"
+
+  github:
+    image: lean-flt-course-tools:4.33.0
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+      - ./.auth/gh:/root/.config/gh
