@@ -40,6 +40,8 @@ docs/                     手机友好的教程站点
 
 课程首页和学习方法见 `docs/index.md`。
 
+手机课程站点：<https://100apps.github.io/lean-flt-course/>
+
 ## 上游材料
 
 - FLT 仓库：<https://github.com/anthropics/fermats-last-theorem>

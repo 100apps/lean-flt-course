@@ -1,7 +1,8 @@
 site_name: Lean × 费马大定理
 site_description: 从高中数学出发，逐步读懂 Lean 4 费马大定理形式化仓库
-repo_url: https://github.com/OWNER/lean-flt-course
-repo_name: OWNER/lean-flt-course
+site_url: https://100apps.github.io/lean-flt-course/
+repo_url: https://github.com/100apps/lean-flt-course
+repo_name: 100apps/lean-flt-course
 edit_uri: edit/main/docs/
 
 theme:
@@ -74,4 +75,3 @@ nav:
       - Lean 符号表: reference/symbols.md
       - 常见错误: reference/errors.md
       - 词汇表: reference/glossary.md
-
